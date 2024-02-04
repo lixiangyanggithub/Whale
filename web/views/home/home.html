@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>鲸鱼通信_首页</title>
+    
+    <link rel="stylesheet" type="text/css" href="./home.css">
+    <link rel="icon" type="image/x-icon" href="background.png">
+</head>
+<body>
+  
+      <ul class="navbar">
+        <li><a href="/home">首页</a></li>
+        <li><a href="/about">关于我们</a></li>
+        <li><a href="/services">服务</a></li>
+        <li><a href="/contact">联系我们</a></li>
+        <!-- <li><a href="/mine">个人中心</a></li> -->
+        <li><a href="/login">登录</a></li>
+        <li><a href="/chat">AI客服</a></li>
+        
+      </ul>
+      <div class="banner">
+        <img class="slide" src="ad_4.png" alt="广告图片4">
+        <img class="slide" src="ad_1.png" alt="广告图片1">
+        <img class="slide" src="ad_2.png" alt="广告图片2">
+        <img class="slide" src="ad_3.png" alt="广告图片3">
+        <img class="slide" src="ad_5.png" alt="广告图片5">
+      </div>
+ <script>
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+
+function showSlide() {
+  slides[currentSlide].classList.add('active');
+}
+
+function hideSlide() {
+  slides[currentSlide].classList.remove('active');
+}
+
+function nextSlide() {
+  hideSlide();
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide();
+}
+
+// 初始化第一张幻灯片
+showSlide();
+
+// 每隔3秒切换幻灯片
+setInterval(nextSlide, 3000);
+
+
+
+
+ </script>
+
+
+<div>
+
+  <h1>今日要闻:</h1>
+  <div class="news">
+  <br>
+  <br>
+  <ul><a href="https://new.qq.com/"><li>腾讯新闻:</li></a></ul>
+  <ol>
+  <li><a href="https://new.qq.com/rain/a/20230704A01VP200">瓦格纳继续为俄乌冲突招募新兵，普里戈任：俄罗斯人，请支持我们</a></li>
+  <br>
+  <li><a href="https://new.qq.com/rain/a/20230704A00Z7Q00">国乒世界排名巨变：新的世界第一诞生！王楚钦反超樊振东登顶榜首</a></li>
+  <br>
+  <li><a href="https://new.qq.com/rain/a/20230703A04PEP00">新时代中国调研行·长江篇|三峡库区崛起“绿色明珠”</a></li>
+  </ol>
+  
+  <ul><a href="https://news.163.com/"><li>网易新闻:</li></a></ul>
+  <ol>
+  <li><a href="https://www.163.com/dy/article/I8O55PT40514D3UH.html">因说了一句“部门不是垃圾桶” 男子被指“辱骂同事”后又遭辞退 公司需支付劳动赔偿金12.5万元</a></li>
+  <br>
+  <li><a href="https://www.163.com/dy/article/I8PPHAJ00514R9OJ.html">3辆车被砸中，清早地库一幕吓懵杭城业主：谁来赔?</a></li>
+  <br>
+  <li><a href="https://www.163.com/dy/article/I8POUB7B0514R9OJ.html">新加坡公民致信拜登：美可采取关键行动改善中美关系并恢复两军对话</a></li>
+  </ol>
+  
+  <ul><a href="https://www.zaobao.com.sg/"><li>联合早报:</li></a></ul>
+  <ol>
+  <li><a href="https://www.zaobao.com/finance/china/story20230703-1410348">中国经济专家警告青年失业若处理不当 或成政治问题导火索</a></li>
+  <br>
+  <li><a href="https://www.zaobao.com/realtime/china/story20230704-1410417">印度多家炼油厂据报以人民币采购俄罗斯原油</a></li>
+  <br>
+  <li><a href="https://www.zaobao.com/finance/china/story20230703-1410369">中国禁止重要半导体原材料出口</a></li>
+  </ol>
+  
+  <ul><a href="http://www.xinhuanet.com/"><li>新华网:</li></a></ul>
+  <ol>
+  <li><a href="http://www.news.cn/fortune/2023-07/04/c_1129730856.htm">到2030年，10类关键核心产品可靠性水平达到国际先进水平——中国制造业未来将更可靠</a></li>
+  <br>
+  <li><a href="http://www.news.cn/fortune/2023-07/04/c_1129730857.htm">车联网让汽车更“聪明”</a></li>
+  <br>
+  <li><a href="http://www.news.cn/fortune/2023-07/04/c_1129731058.htm">相约南山，何以标杆 “广东经济第一区”高质量发展观察</a></li>
+  </ol>
+  
+  </div>
+  </div>
+  
+  
+  <div>
+  <h1>公告:</h1>
+  <div class="notice">
+  <ol>
+    <br>
+  <li><a href="/notice">鲸鱼通信门户网站7月4日23：00至7月5日7：00系统紧急升级公告</a></li>
+  <br>
+  <li><a href="/notice">关于6月27日系统升级的公告</a></li>
+  <br>
+  <li><a href="/notice">鲸鱼通信门户网站6月20日23：00至6月21日7：00系统紧急升级公告</a></li>
+  <br>
+  <li><a href="/notice">鲸鱼通信门户网站6月13日23：00至6月14日7：00系统紧急升级公告</a></li>
+  
+  
+  </ol>
+  
+  </div>
+  
+  
+  </div>
+  
+  
+  
+  
+  
+  <video src="video_1.mp4" controls="controls" autoplay width="750" height="600"></video>
+  <video src="video_2.mp4" controls="controls" autoplay width="750" height="600"></video>
+  
+</body>
+</html>

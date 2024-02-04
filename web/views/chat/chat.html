@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI客服</title>
+    <link rel="stylesheet" href="chat.css" />
+    <link rel="icon" type="image/x-icon" href="background.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <ul class="navbar">
+      <li><a href="/home">首页</a></li>
+      <li><a href="/about">关于我们</a></li>
+      <li><a href="/services">服务</a></li>
+      <li><a href="/contact">联系我们</a></li>
+      <!-- <li><a href="/mine">个人中心</a></li> -->
+      <li><a href="/login">登录</a></li>
+      <li><a href="/chat">AI客服</a></li>
+    </ul>
+    <div class="container">
+      <div class="header" style="text-align: center">
+        <img
+          class="header-icon"
+          src="background.png"
+          width="50px"
+          height="50px"
+        />
+      </div>
+      <div class="content"></div>
+      <div class="input-area">
+        <textarea
+          name="text"
+          id="textarea"
+          placeholder="请在这里输入你的问题"
+        ></textarea>
+        <div class="button-area">
+          <button id="send-btn" onclick="send()">发 送</button>
+        </div>
+      </div>
+    </div>
+    <script src="chat.js"></script>
+  </body>
+</html>

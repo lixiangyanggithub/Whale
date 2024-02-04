@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="./login_2.css">
+	<link rel="icon" type="image/x-icon" href="background.png">
+<!--	不可去除，否则充值系统会异常-->
+	<script src="./static/js/cookie.js"></script>
+</head>
+
+<body>
+	<ul class="navbar">
+        <li><a href="/home">首页</a></li>
+        <li><a href="/about">关于我们</a></li>
+        <li><a href="/services">服务</a></li>
+        <li><a href="/contact">联系我们</a></li>
+        <!-- <li><a href="/mine">个人中心</a></li> -->
+        <li><a href="/login">登录</a></li>
+        <li><a href="/chat">AI客服</a></li>
+      </ul>
+	<!-- partial:index.partial.html -->
+	<div class="container right-panel-active">
+		<!-- Sign Up -->
+		<div class="container__form container--signup">
+			<form action="#" class="form" id="form1">
+				<h2 class="form__title">注册</h2>
+				<input type="text" placeholder="User" class="input" />
+				<input type="email" placeholder="Email" class="input" />
+				<input type="password" placeholder="Password" class="input" />
+				<button class="btn">注册</button>
+			</form>
+		</div>
+
+		<!-- Sign In -->
+		<div class="container__form container--signin">
+			<form action="#" class="form" id="form2">
+				<h2 class="form__title">登录</h2>
+				<input type="text" placeholder="Account" class="input" id="account" />
+				<input type="password" placeholder="Password" class="input" id="password" />
+				<a href="#" class="link">忘记密码?</a>
+				<button class="btn" id="login_btn">登录</button>
+			</form>
+		</div>
+
+		<!-- Overlay -->
+		<div class="container__overlay">
+			<div class="overlay">
+				<div class="overlay__panel overlay--left">
+					<button class="btn" id="signIn">登录</button>
+				</div>
+				<div class="overlay__panel overlay--right">
+					<button class="btn" id="signUp">注册</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- partial -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+	<script src="./login.js"></script>
+</body>
+
+</html>

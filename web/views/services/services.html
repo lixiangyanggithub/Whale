@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+	<meta charset="UTF-8">
+	<title>服务</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="./static/bootstrap-3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./services.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src="./static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="./static/js/cookie.js"></script>
+    <link rel="icon" type="image/x-icon" href="background.png">
+</head>
+
+<body>
+	<ul class="navbar">
+        <li><a href="/home">首页</a></li>
+        <li><a href="/about">关于我们</a></li>
+        <li><a href="/services">服务</a></li>
+        <li><a href="/contact">联系我们</a></li>
+        <!-- <li><a href="/mine">个人中心</a></li> -->
+        <li><a href="/login">登录</a></li>
+        <li><a href="/chat">AI客服</a></li>
+    </ul>
+    <div style="height: 50px"></div>
+    <div id="myCarousel" class="carousel slide">
+        <!-- 轮播（Carousel）指标 -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- 轮播（Carousel）项目 -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <a href="#"  target="_blank">
+                    <img decoding="async" src="./ad_4.png" class="carousel-img" alt="First slide">
+                </a>
+            </div>
+            <div class="item">
+                <a href="#"  target="_blank">
+                    <img decoding="async" src="./ad_2.png" class="carousel-img" alt="Second slide">
+                </a>
+            </div>
+            <div class="item">
+                <a href="#"  target="_blank">
+                    <img decoding="async" src="./ad_3.png" class="carousel-img" alt="Third slide">
+                </a>
+            </div>
+        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+	<div class="service-model inquire-info">
+        <div class="service-model-content">
+            <div class="user-money user-info">
+                我的话费<span id="money">1000元</span>
+            </div>
+            <div class="user-flow user-info">
+                我的流量<span id="flow">10000M</span>
+            </div>
+        </div>
+	</div>
+    <div class="service-model update-money">
+        <h2>充值话费</h2>
+        <div class="decoration"></div>
+        <div class="service-model-content">
+            <ul>
+                <li>
+                    <span>￥10</span>
+                    <button onclick="updateMoney(10)">充值</button>
+                </li>
+                <li>
+                    <span>￥20</span>
+                    <button onclick="updateMoney(20)">充值</button>
+                </li>
+                <li>
+                    <span>￥30</span>
+                    <button onclick="updateMoney(30)">充值</button>
+                </li>
+                <li>
+                    <span>￥50</span>
+                    <button onclick="updateMoney(50)">充值</button>
+                </li>
+                <li>
+                    <span>￥80</span>
+                    <button onclick="updateMoney(80)">充值</button>
+                </li>
+                <li>
+                    <span>￥100</span>
+                    <button onclick="updateMoney(100)">充值</button>
+                </li>
+            </ul>
+            <label>
+                自定义
+                <input id="input-money" placeholder="请输入金额">
+                <button onclick="updateMoney(-1)">充值</button>
+            </label>
+        </div>
+    </div>
+    <div class="service-model update-flow">
+		<h2>购买流量</h2>
+        <div class="decoration"></div>
+        <div class="service-model-content">
+            <ul>
+                <li>
+                    <span>200M/￥6</span>
+                    <button onclick="updateFlow(200)">购买</button>
+                </li>
+                <li>
+                    <span>400M/￥12</span>
+                    <button onclick="updateFlow(400)">购买</button>
+                </li>
+                <li>
+                    <span>600M/￥18</span>
+                    <button onclick="updateFlow(600)">购买</button>
+                </li>
+                <li>
+                    <span>800M/￥24</span>
+                    <button onclick="updateFlow(800)">购买</button>
+                </li>
+                <li>
+                    <span>1000M/￥30</span>
+                    <button onclick="updateFlow(1000)">购买</button>
+                </li>
+                <li>
+                    <span>1200M/￥36</span>
+                    <button onclick="updateFlow(1200)">购买</button>
+                </li>
+            </ul>
+            <label>
+                自定义
+                <input id="input-flow" placeholder="请输入流量">
+                <button onclick="updateFlow(-1)">购买</button>
+            </label>
+        </div>
+	</div>
+    <div class="service-model feedback">
+        <h2>反馈信息</h2>
+        <div class="decoration"></div>
+        <div class="service-model-content">
+            <label for="chat-input"></label>
+            <textarea id="chat-input" maxlength="300" class="chat-input" placeholder="我想反馈..." style="height: 40px"></textarea>
+            <div class="operate">
+                <p data-toggle="modal" data-target="#my-feedback" onclick="myFeedback()">我的反馈</p>
+                <button onclick="sendFeedback()">发送反馈</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="my-feedback" tabindex="-1" role="dialog"   aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-body">
+            <div class="modal-content">
+                <div class="modal-title">
+                    <h4 id="myModalLabel">我的反馈</h4>
+                    <button class="modal-btn-close" type="button" data-dismiss="modal"   aria-hidden="true">&times;</button>
+                </div>
+                <div class="content">
+                    <ul id="my-feedback-list">
+                    </ul>
+                </div>
+                <div class="operate">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div><!--   /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+	<script src="./services.js"></script>
+    
+
+<!-- 
+ <h1>向我们付款:</h1>
+<img src="pay.png" alt="pay"> -->
+
+
+
+    
+</body>
+
+</html>
